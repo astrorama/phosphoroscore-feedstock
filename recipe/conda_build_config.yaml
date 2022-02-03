@@ -1,6 +1,6 @@
 channel_sources:
-  - astrorama,conda-forge,defaults
+  - astrorama,astrorama/label/develop,conda-forge,defaults
 
 channel_targets:
-  - astrorama main
+  - astrorama develop
 
