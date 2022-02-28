@@ -1,5 +1,5 @@
 {% set name = "PhosphorosCore" %}
-{% set version = "1.2.0" %}
+{% set version = "1.3" %}
 {% set build_number = 1 %}
 
 package:
@@ -7,7 +7,7 @@ package:
     version: {{ version }}
 
 source:
-    git_rev: {{ version }}
+    git_rev: develop
     git_url: https://{{ environ.get('GIT_USER', '') }}@gitlab.euclid-sgs.uk/PF-PHZ/PhosphorosCore.git
 
 build:
@@ -31,7 +31,7 @@ requirements:
     host:
         - python
         - boost-cpp
-        - alexandria ==2.24.0
+        - alexandria ==2.25
         - cfitsio >=3.470
         - CCfits >=2.5
     run:
