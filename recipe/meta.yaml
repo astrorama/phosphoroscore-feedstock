@@ -31,7 +31,7 @@ requirements:
     host:
         - python
         - boost-cpp
-        - alexandria ==2.25
+        - alexandria ==2.26
         - cfitsio >=3.470
         - CCfits >=2.5
     run:
