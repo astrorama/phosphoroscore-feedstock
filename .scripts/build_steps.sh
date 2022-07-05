@@ -20,12 +20,14 @@ export PYTHONUNBUFFERED=1
 export RECIPE_ROOT="${RECIPE_ROOT:-/home/conda/recipe_root}"
 export CI_SUPPORT="${FEEDSTOCK_ROOT}/.ci_support"
 export CONFIG_FILE="${CI_SUPPORT}/${CONFIG}.yaml"
-export GIT_ASKPASS="$(dirname "$0")/git-askpass.sh"
 
 cat >~/.condarc <<CONDARC
 
 conda-build:
- root-dir: ${FEEDSTOCK_ROOT}/build_artifacts
+  root-dir: ${FEEDSTOCK_ROOT}/build_artifacts
+pkgs_dirs:
+  - ${FEEDSTOCK_ROOT}/build_artifacts/pkg_cache
+  - /opt/conda/pkgs
 
 CONDARC
 
@@ -49,6 +51,10 @@ fi
 
 
 ( endgroup "Configuring conda" ) 2> /dev/null
+
+if [[ -f "${FEEDSTOCK_ROOT}/LICENSE.txt" ]]; then
+  cp "${FEEDSTOCK_ROOT}/LICENSE.txt" "${RECIPE_ROOT}/recipe-scripts-license.txt"
+fi
 
 if [[ "${BUILD_WITH_CONDA_DEBUG:-0}" == 1 ]]; then
     if [[ "x${BUILD_OUTPUT_ID:-}" != "x" ]]; then
