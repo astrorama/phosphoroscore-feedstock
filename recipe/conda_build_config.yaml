@@ -2,5 +2,5 @@ channel_sources:
   - astrorama/label/develop,astrorama,conda-forge,defaults
 
 channel_targets:
-  - astrorama develop
+  - astrorama test
 
