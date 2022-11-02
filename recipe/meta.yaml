@@ -1,6 +1,6 @@
 {% set name = "PhosphorosCore" %}
 {% set version = "1.4.0" %}
-{% set build_number = 0 %}
+{% set build_number = 1 %}
 
 package:
     name: {{ name|lower }}
@@ -30,7 +30,7 @@ requirements:
         - {{ compiler('c') }}
     host:
         - python
-        - boost-cpp
+        - boost-cpp ==1.74.0
         - alexandria ==2.27.0
         - cfitsio >=3.470
         - CCfits >=2.5
