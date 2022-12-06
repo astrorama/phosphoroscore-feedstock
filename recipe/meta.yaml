@@ -30,7 +30,7 @@ requirements:
         - {{ compiler('c') }}
     host:
         - python
-        - boost-cpp ==1.74.0
+        - boost-cpp 
         - alexandria ==2.28.0
         - cfitsio >=3.470
         - CCfits >=2.5
