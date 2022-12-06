@@ -1,3 +1,6 @@
+github:
+   tooling_branch_name: main
+
 channels:
     targets:
       - ["astrorama", "develop"]
