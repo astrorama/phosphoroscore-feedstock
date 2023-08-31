@@ -1,7 +1,7 @@
 {% set name = "PhosphorosCore" %}
 {% set version = "1.8.2" %}
 {% set tagversion = "anaconda.1.8.2" %}
-{% set build_number = 2 %}
+{% set build_number = 3 %}
 
 package:
     name: {{ name|lower }}
