@@ -2,7 +2,6 @@
 {% set version = "1.8.5" %}
 {% set tagversion = "anaconda.1.8.5" %}
 {% set build_number = 0 %}
-
 package:
     name: {{ name|lower }}
     version: {{ version }}
