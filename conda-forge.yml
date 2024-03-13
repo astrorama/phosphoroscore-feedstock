@@ -1,10 +1,6 @@
 github:
    tooling_branch_name: main
 
-channels:
-    targets:
-      - ["astrorama", "develop"]
-
 test_on_native_only: true
 
 build_platform:

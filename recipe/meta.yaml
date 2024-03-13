@@ -1,7 +1,7 @@
 {% set name = "PhosphorosCore" %}
 {% set version = "2.0.0" %}
 {% set tagversion = "anaconda.2.0.0" %}
-{% set build_number = 0 %}
+{% set build_number = 1 %}
 
 package:
     name: {{ name|lower }}
@@ -35,7 +35,7 @@ requirements:
         - python
         - boost-cpp
         - libcxx
-        - alexandria ==2.30.4
+        - alexandria ==2.31.1
         - cfitsio >=3.470
         - CCfits >=2.5
     run:
