@@ -1,13 +1,14 @@
 {% set name = "PhosphorosCore" %}
-{% set version = "1.7.0" %}
-{% set build_number = 1 %}
+{% set version = "2.1.1" %}
+{% set tagversion = "2.1.1" %}
+{% set build_number = 0 %}
 
 package:
     name: {{ name|lower }}
     version: {{ version }}
 
 source:
-    git_rev: {{ version }} 
+    git_rev: {{ tagversion }} 
     git_url: https://github.com/astrorama/PhosphorosCore.git 
 
 build:
@@ -28,18 +29,20 @@ requirements:
         - make
         - {{ compiler('cxx') }}
         - {{ compiler('c') }}
-        - libcxx<16
+        - libcxx
+        - rhash
     host:
         - python
         - boost-cpp
         - libcxx<16
-        - alexandria ==2.29.0
+        - alexandria ==2.31.3
         - cfitsio >=3.470
         - CCfits >=2.5
     run:
         - {{ pin_compatible('python', min_pin='x.x', max_pin='x.x') }}
         - {{ pin_compatible('boost-cpp', min_pin='x.x', max_pin='x.x') }}
         - {{ pin_compatible('libcxx', min_pin='x.x', max_pin='x.x') }}
+        - {{ pin_compatible('cfitsio', min_pin='x.x', max_pin='x.x') }}
         - {{ pin_compatible('CCfits', min_pin='x.x', max_pin='x.x') }}
         - {{ pin_compatible('astropy', min_pin='x.x', max_pin='x') }}
 
