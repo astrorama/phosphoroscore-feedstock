@@ -29,12 +29,12 @@ requirements:
         - make
         - {{ compiler('cxx') }}
         - {{ compiler('c') }}
-        - libcxx<16
+        - libcxx
         - rhash
     host:
         - python
         - boost-cpp
-        - libcxx<16
+        - libcxx
         - alexandria ==2.31.3
         - cfitsio >=3.470
         - CCfits >=2.5
