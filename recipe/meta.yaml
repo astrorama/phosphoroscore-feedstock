@@ -1,7 +1,7 @@
 {% set name = "PhosphorosCore" %}
 {% set version = "2.1.2" %}
 {% set tagversion = "2.1.2" %}
-{% set build_number = 2 %}
+{% set build_number = 3 %}
 
 package:
     name: {{ name|lower }}
@@ -47,7 +47,7 @@ requirements:
         - {{ pin_compatible('astropy', min_pin='x.x', max_pin='x') }}
 
 about:
-    home: http://isdc.unige.ch/euclid/phosphoros/
+    home: http://astro.unige.ch/euclid/phosphoros/
     license: LGPL
     summary: A photometric redshift determination tool based on a template fitting method.
 
