@@ -1,7 +1,7 @@
 {% set name = "PhosphorosCore" %}
 {% set version = "2.1.11" %}
 {% set tagversion = "2.1.11" %}
-{% set build_number = 0 %}
+{% set build_number = 1 %}
 
 package:
     name: {{ name|lower }}
@@ -31,6 +31,7 @@ requirements:
         - {{ compiler('c') }}
         - libcxx
         - rhash
+        - PY_lxml
     host:
         - python
         - boost-cpp
@@ -38,6 +39,7 @@ requirements:
         - alexandria ==2.31.3
         - cfitsio >=3.470
         - CCfits >=2.5
+        - PY_lxml
     run:
         - {{ pin_compatible('python', min_pin='x.x', max_pin='x.x') }}
         - {{ pin_compatible('boost-cpp', min_pin='x.x', max_pin='x.x') }}
