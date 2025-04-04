@@ -31,7 +31,7 @@ requirements:
         - {{ compiler('c') }}
         - libcxx
         - rhash
-        - py_lxml
+        - lxml
     host:
         - python
         - boost-cpp
@@ -39,7 +39,7 @@ requirements:
         - alexandria ==2.31.3
         - cfitsio >=3.470
         - CCfits >=2.5
-        - py_lxml
+        - lxml
     run:
         - {{ pin_compatible('python', min_pin='x.x', max_pin='x.x') }}
         - {{ pin_compatible('boost-cpp', min_pin='x.x', max_pin='x.x') }}
