@@ -31,7 +31,6 @@ requirements:
         - {{ compiler('c') }}
         - libcxx
         - rhash
-        - lxml
     host:
         - python
         - boost-cpp
